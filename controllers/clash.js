@@ -9,22 +9,15 @@ const clashCards = async (req, res) => {
 
 
     try {
+
         const {data} = await instance.get("")
-
-        const mapCards = data['items'].map(cards=>{
-            return cards
-        }
-        
-        )
-        const nameImage = mapCards.filter(a=>{
-            return a.name && a.iconUrls.medium
-        })
-        console.log(nameImage.iconUrls)
+        console.log(data)
+        const cards = data.items
+        console.log(cards)
      
-
         res.status(200).json({
             ok: true,
-            resp:mapCards
+            resp:cards
         })
 
     } catch (error) {
