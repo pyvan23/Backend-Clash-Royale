@@ -16,8 +16,8 @@ const clashCards = async (req, res) => {
         console.log(cards)
      
         res.status(200).json({
-            ok: true,
-            resp:cards
+            
+            cards
         })
 
     } catch (error) {
