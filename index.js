@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express');
 const { dbConnection }=require('./DB/config')
 const cors = require('cors');
-const { getCards } = require('./routes/clash-royale');
+
 //server
 
 const app = express();
