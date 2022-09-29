@@ -10,18 +10,19 @@ const clashCards = async (req, res) => {
 
     try {
 
-        const {data} = await instance.get("")
-        console.log(data)
-        const cards = data.items
-        console.log(cards)
-     
+        const response = await instance.get("")
+        
+        const { items } = await response.data
+        
+        console.log(items);
+
         res.status(200).json({
-            
-            cards
+
+           items
         })
 
     } catch (error) {
-      
+
     }
 
 }
