@@ -12,13 +12,13 @@ const clashCards = async (req, res) => {
 
         const response = await instance.get("")
         
-        const { items } = await response.data
+        const  items  = await response.data
         
         console.log(items);
-
+        
         res.status(200).json({
-
-           items
+            items
+           
         })
 
     } catch (error) {
